@@ -48,7 +48,7 @@
 		<header>
 			<h2>Hours</h2>
 		</header>
-		<p>Monday-Friday<br>8:00 AM-7:00 PM</p>
+		<p>Monday-Friday<br><time datetime="T8:00-5:00">8:00</time> AM-7:00 PM</p>
 		<p>Saturday<br>10:00 AM-5:00 PM</p>
 		<p>Sunday<br>11:00 AM-4:00 PM</p>
 	</div>
@@ -208,16 +208,59 @@
 		</select>
 		
 		<fieldset>
-			<legend>Numbers</legend>
+			<legend>Quantity</legend>
 				<p>Quantity</p>
 				<label>
-					<input type="checkbox" name="Quantity" value="individual">Individual
+					<input type="radio" name="Quantity" value="individual">Individual
 				</label>
 				<label>
-					<input type="checkbox" name="Quantity" value="onedozen">One Dozen
+					<input type="radio" name="Quantity" value="onedozen">One Dozen
 				</label>
 				<label>
-					<input type="checkbox" name="Quantity" value="twodozen">Two Dozen
+					<input type="radio" name="Quantity" value="twodozen">Two Dozen
+				</label>
+		</fieldset>
+		
+		<fieldset>
+			<legent>Flavors</legent>
+			<p>Flavor</p>
+			<label>
+				<input type="checkbox" name="Flavors" value="weddingcake">Wedding Cake
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="thetuxedo">The Tuxedo
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="princess">Princess
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="gobigred">Go Big Red
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="pbcup">PB Cup
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="cookies-creme">Cookies &amp; Creme
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="signature">Signature
+			</label>
+			<label>
+				<input type="checkbox" name="Flavors" value="chocolatelovers">Chocolate Lovers
+			</label>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Type</legend>
+				<p>Type</p>
+				<label>
+					<input type="radio" name="Type" value="signature">Signature
+				</label>
+				<label>
+					<input type="radio" name="Type" value="allergenfree">Allergen Free
+				</label>
+				<label>
+					<input type="radio" name="Type" value="vegan">Vegan
 				</label>
 		</fieldset>
 		
@@ -225,11 +268,31 @@
 	</form>
 </section>
 
-<footer>
-	<header>
-		<h4>Real Fake Authentic</h4>
-	</header>
-	<p>specialty bakery dedicated to creating and baking several different sweet treats. </p>
+<footer id="bg-drk-turq">
+	<section class="wrapper fl">
+		<header>
+			<h4>Real Fake Authentic</h4>
+		</header>
+		<p>specialty bakery dedicated to creating and baking several different sweet treats.</p>
+	</section>
+	
+	<section class="wrapper fl">
+		<header>
+			<h4>Our Location</h4>
+		</header>
+		<p>123 Fake Street #101</p>
+		<p>Fakersville, FA 12345</p>
+	</section>
+	
+	<div class="wrapper fr">
+		<ul>
+			<li><a href="https://www.facebook.com/" target="_blank"></a> <span>Facebook</span> </li>
+			<li><a href="https://www.tumblr.com/" target="_blank"></a> <span>Tumbler</span> </li>
+			<li><a href="https://www.pinterest.com/" target="_blank"></a> <span>Pinterest</span> </li>
+			<li><a href="https://www.linkedin.com/" target="_blank"></a> <span>Linkedin</span> </li>
+			<li><a href="https://www.google.com/" target="_blank"></a> <span>Google</span> </li>
+		</ul>
+	</div>
 </footer>
 
 
