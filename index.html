@@ -60,8 +60,8 @@
 	<div class="wrapper row">
 		<header>
 			<h2>Our Treats</h2>
+			<p>We have something for every craving, celebration and occasion. We also offer several allergen free options.</p>
 		</header>
-		<p>We have something for every craving, celebration and occasion. We also offer several allergen free options.</p>
 		<section class="fl">
 			<div class="circle"></div>
 			<header>
@@ -166,130 +166,135 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>Mini</td>
+					<td>$1.25</td>
+					<td>$15.00</td>
+					<td>$2.00 off</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td colspan="2"></td>
+					<td>Regular</td>
+					<td>$2.50</td>
+					<td colspan="2">$27.50</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td colspan="2"></td>
+					<td>Jumbo</td>
+					<td>$3.50</td>
+					<td colspan="2">$38.50</td>
 				</tr>
 			</tbody>
 		</table>
 
-		<form class="fr row">
-			<fieldset>
-				<legend>Personal Info</legend>
-					<label for="f-name">First Name</label>
-					<input type="text" name="Name" id="f-name">
+		<form class="row">
+			<div class="fl">
+				<fieldset>
+					<legend>Personal Info</legend>
+						<label for="f-name">First Name</label>
+						<input type="text" name="Name" id="f-name">
 
-					<label for="l-name">Last Name</label>
-					<input type="text" name="Name" id="l-name">
+						<label for="l-name">Last Name</label>
+						<input type="text" name="Name" id="l-name">
 
-					<label for="tel">Phone Name</label>
-					<input type="tel" name="Telephone" id="tel">
+						<label for="tel">Phone Name</label>
+						<input type="tel" name="Telephone" id="tel">
 
-					<label for="email">Email Address</label>
-					<input type="email" name="Email" id="email" >
-			</fieldset>
+						<label for="email">Email Address</label>
+						<input type="email" name="Email" id="email" >
+				</fieldset>
 
-			<label for="message">Special Requests</label>
-			<textarea id="message" maxlength="500"></textarea>
+				<label for="message">Special Requests</label>
+				<textarea id="message" maxlength="500"></textarea>
+			</div>
+			<div class="fr">
+				<fieldset>
+					<legend>Occasion</legend>
+					<p>Occasion</p>
+					<select name="occasion">
+						<option>Wedding</option>
+						<option>Graduation</option>
+						<option>Birthday</option>
+						<option>Other...</option>
+					</select>
+				</fieldset>
 
-			<fieldset>
-				<legend>Occasion</legend>
-				<select name="occasion">
-					<option>Wedding</option>
-					<option>Graduation</option>
-					<option>Birthday</option>
-					<option>Other...</option>
-				</select>
-			</fieldset>
+				<fieldset class="row">
+					<legend>Quantity</legend>
+						<p>Quantity</p>
+						<div class="col-1-3 fl">
+							<label>
+								<input type="radio" name="Quantity" value="individual">Individual
+							</label>
+						</div>
+						<div class="col-1-3 fl">
+							<label>
+								<input type="radio" name="Quantity" value="onedozen">One Dozen
+							</label>
+						</div>
+						<div class="col-1-3 fr">
+							<label>
+								<input type="radio" name="Quantity" value="twodozen">Two Dozen
+							</label>
+						</div>
+				</fieldset>
 
-			<fieldset class="row">
-				<legend>Quantity</legend>
-					<p>Quantity</p>
-					<div>
+				<fieldset class="row">
+					<legend>Flavors</legend>
+					<p>Flavor</p>
+					<div class="col-1-3 fl">
 						<label>
-							<input type="radio" name="Quantity" value="individual">Individual
+							<input type="checkbox" name="Flavors" value="weddingcake">Wedding Cake
+						</label>
+						<label>
+							<input type="checkbox" name="Flavors" value="gobigred">Go Big Red
+						</label>
+						<label>
+							<input type="checkbox" name="Flavors" value="signature">Signature
 						</label>
 					</div>
-					<div>
+
+					<div class="col-1-3 fl">
 						<label>
-							<input type="radio" name="Quantity" value="onedozen">One Dozen
+							<input type="checkbox" name="Flavors" value="thetuxedo">The Tuxedo
+						</label>		
+						<label>
+							<input type="checkbox" name="Flavors" value="pbcup">PB Cup
+						</label>
+						<label>
+							<input type="checkbox" name="Flavors" value="chocolatelovers">Chocolate Lovers
 						</label>
 					</div>
-					<div>
+					
+					<div class="col-1-3 fr">
 						<label>
-							<input type="radio" name="Quantity" value="twodozen">Two Dozen
+							<input type="checkbox" name="Flavors" value="princess">Princess
+						</label>
+						<label>
+							<input type="checkbox" name="Flavors" value="cookies-creme">Cookies &amp; Creme
 						</label>
 					</div>
-			</fieldset>
+				</fieldset>
 
-			<fieldset class="row">
-				<legend>Flavors</legend>
-				<p>Flavor</p>
-				<div>
-					<label>
-						<input type="checkbox" name="Flavors" value="weddingcake">Wedding Cake
-					</label>
-					<label>
-						<input type="checkbox" name="Flavors" value="gobigred">Go Big Red
-					</label>
-					<label>
-						<input type="checkbox" name="Flavors" value="signature">Signature
-					</label>
-				</div>
+				<fieldset class="row">
+					<legend>Type</legend>
+						<p>Type</p>
+						<div class="col-1-3 fl">
+							<label>
+								<input type="radio" name="Type" value="signature">Signature
+							</label>
+						</div>
+						<div class="col-1-3 fl">
+							<label>
+								<input type="radio" name="Type" value="allergenfree">Allergen Free
+							</label>
+						</div>
+						<div class="col-1-3 fl">
+							<label>
+								<input type="radio" name="Type" value="vegan">Vegan
+							</label>
+						</div>
+				</fieldset>
 
-				<div>
-					<label>
-						<input type="checkbox" name="Flavors" value="thetuxedo">The Tuxedo
-					</label>		
-					<label>
-						<input type="checkbox" name="Flavors" value="pbcup">PB Cup
-					</label>
-					<label>
-						<input type="checkbox" name="Flavors" value="chocolatelovers">Chocolate Lovers
-					</label>
-				</div>
-				<div>
-					<label>
-						<input type="checkbox" name="Flavors" value="princess">Princess
-					</label>
-					<label>
-						<input type="checkbox" name="Flavors" value="cookies-creme">Cookies &amp; Creme
-					</label>
-				</div>
-			</fieldset>
-
-			<fieldset class="row">
-				<legend>Type</legend>
-					<p>Type</p>
-					<div>
-					<label>
-						<input type="radio" name="Type" value="signature">Signature
-					</label>
-					</div>
-					<div>
-						<label>
-							<input type="radio" name="Type" value="allergenfree">Allergen Free
-						</label>
-					</div>
-					<div>
-						<label>
-							<input type="radio" name="Type" value="vegan">Vegan
-						</label>
-					</div>
-			</fieldset>
-
-			<p><a href="#" id="btn-white">Pay On PayPal</a></p>
+				<p><a href="#" class="btn-white">Pay On PayPal</a></p>
+			</div>
 		</form>
 	</div>
 </section>
