@@ -2,27 +2,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Quicksand:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Assignment-4</title>
 </head>
 
 <body>
 
 <header>
-	<nav>
+	<nav class="smooth-scroll">
 		<ul>
-			<li><a href="#">Home</a></li>
+			<li><a href="#home">Home</a></li>
 			<li><a href="#about">About</a></li>
-			<li><h1><img src="img/logo.jpg" alt="Real Authentic Fake"></h1></li>
+			<li><h1><a href="#home"><img src="img/logo.jpg" alt="Real Authentic Fake" width="60" height="60"></a></h1></li>
 			<li><a href="#products">Products</a></li>
 			<li><a href="#contact">Contact Us</a></li>
 		</ul>
 	</nav>
 </header>
 
-<div class="bg-lgt-turq">
-	<div  class="wrapper">
-		<img src="img/hero.jpg" alt="Signature Vanilla Cupcake with Turquoise frosting">
-		<h2>Try Our Signature Cupcake</h2>
+<div class="bg-lgt-turq smooth-scroll">
+	<div class="wrapper" id="home" >
+		<p>Try Our Signature Cupcake</p>
 	</div>
 </div>
 
@@ -30,38 +32,38 @@
 	<p>Specialty bakery dedicated to creating and baking several different sweet treats.</p>
 </div>
 
-<section class="wrapper" id="about">
-	<div class="row">
-		<img src="img/display-cupcake.jpg" alt="">
+<div class="wrapper row" id="about">
+	<img src="img/display-cupcake.jpg" alt="" width="170" height="170" class="fl">
+	<section class="fl">
 		<header>
 			<h2>About Us</h2>
 		</header>
 		<p>We offer cupcakes in three sizes: Jumbo Gourmet (filled), Regular &amp; Mini. Plus, we make Cakes, Cake Balls/Pops, Brownie Shots and several other sweet treats!</p>
-		<p>We are open 7 days a week, beginning Sunday at 11 am till 4 pm. Monday through Friday 8 am till 7 pm, and Saturday 10 am to 5 pm.</p>
-		<p>Stop in today for a treat or give us a call for an order!  We take special orders daily and provide delivery options. For pricing inquiries, <a href=""><b>please give us a call.</b></a></p>
-		<a href="" id="btn-turq">Contact Us</a>
-	</div>
-</section>
+		<p>We are open 7 days a week, beginning Sunday <time datetime="11:00">11:00</time> am-<time datetime="16:00">4:00</time> pm. Monday through Friday <time datetime="08:00">8:00</time> am-<time datetime="19:00">7:00</time> pm, and Saturday <time datetime="10:00">10:00</time> am-<time datetime="17:00">5:00</time> pm.</p>
+		<p>Stop in today for a treat or give us a call for an order!  We take special orders daily and provide delivery options. For pricing inquiries, <a href="tel:+18002225858"><b>please give us a call.</b></a></p>
+		<p class="smooth-scroll"><a href="#contact" id="btn-turq">Contact Us</a></p>
+	</section>
 
-<section class="wrapper">
-	<div class="row">
+	<section class="fr">
 		<header>
 			<h2>Hours</h2>
 		</header>
-		<p>Monday-Friday<br><time datetime="T8:00-5:00">8:00</time> AM-<time datetime="T7:00-5:00">7:00</time> PM</p><!--Could not get these to validate......any idea?????????-->
-		<p>Saturday<br><time datetime="T10:00-5:00">10:00</time> AM-<time datetime="T5:00-5:00">5:00</time> PM</p>
-		<p>Sunday<br><time datetime="T11:00-5:00">11:00</time> AM-<time datetime="T4:00-5:00">4:00</time> PM</p>
-	</div>
-</section>
+		<ul>
+			<li><b>Monday-Friday</b><br><time datetime="08:00">8:00</time> AM-<time datetime="19:00">7:00</time> PM</li>
+			<li><b>Saturday</b><br><time datetime="10:00">10:00</time> AM-<time datetime="17:00">5:00</time> PM</li>
+			<li><b>Sunday</b><br><time datetime="11:00">11:00</time> AM-<time datetime="16:00">4:00</time> PM</li>
+		</ul>
+	</section>
+</div>
 
-<section class="bg-lgt-turq"  id="products">
+<section class="bg-lgt-turq smooth-scroll"  id="products">
 	<div class="wrapper row">
 		<header>
 			<h2>Our Treats</h2>
 		</header>
 		<p>We have something for every craving, celebration and occasion. We also offer several allergen free options.</p>
 		<section class="fl">
-			<div></div>
+			<div class="circle"></div>
 			<header>
 				<h3>Signature Cupcakes</h3>
 			</header>
@@ -69,7 +71,7 @@
 			<a href="#contact" class="btn-white">Order Now</a>
 		</section>
 		<section class="fl">
-			<div></div>
+			<div class="circle"></div>
 			<header>
 				<h3>Allergen Free</h3>
 			</header>
@@ -77,7 +79,7 @@
 			<a href="#contact" class="btn-white">Order Now</a>
 		</section>
 		<section class="fr">
-			<div></div>
+			<div class="circle"></div>
 			<header>
 				<h3>Vegan</h3>
 			</header>
@@ -87,7 +89,7 @@
 	</div>
 </section>
 
-<section class="wrapper">
+<section class="wrapper smooth-scroll">
 	<header>
 		<h2>Daily Flavors</h2>
 	</header>
@@ -145,151 +147,181 @@
 	</div>
 </section>
 
-<section>
-	<header>
-		<h2>Place Order</h2>
-	</header>
-	<p>Time limits for orders are 48 hours; please wait for a confirmation email to verify your order.</p>
-	<table>
-		<caption>Prices</caption>
-		<thead>
-	
+<section class="bg-lgt-turq smooth-scroll"  id="contact">
+	<div class="wrapper">
+		<header>
+			<h2>Place Order</h2>
+		</header>
+		<p>Time limits for orders are 48 hours; please wait for a confirmation email to verify your order.</p>
+		<table>
+			<caption>Prices</caption>
+			<thead>
+
+					<tr>
+						<th colspan="2">Individual</th>
+						<th>One Dozen</th>
+						<th>Two Dozen</th>
+					</tr>
+
+			</thead>
+			<tbody>
 				<tr>
-					<th colspan="2">Individual</th>
-					<th>One Dozen</th>
-					<th>Two Dozen</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
-	
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td colspan="2"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td colspan="2"></td>
-			</tr>
-		</tbody>
-	</table>
-	
-	<form class="fr" id="contact">
-		<fieldset>
-			<legend>Personal Info</legend>
-				<label for="f-name">First Name</label>
-				<input type="text" name="Name" id="f-name">
+				<tr>
+					<td></td>
+					<td></td>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td colspan="2"></td>
+				</tr>
+			</tbody>
+		</table>
 
-				<label for="l-name">Last Name</label>
-				<input type="text" name="Name" id="l-name">
+		<form class="fr row">
+			<fieldset>
+				<legend>Personal Info</legend>
+					<label for="f-name">First Name</label>
+					<input type="text" name="Name" id="f-name">
 
-				<label for="tel">Phone Name</label>
-				<input type="tel" name="Telephone" id="tel">
+					<label for="l-name">Last Name</label>
+					<input type="text" name="Name" id="l-name">
 
-				<label for="email">Email Address</label>
-				<input type="email" name="Email" id="email" >
-		</fieldset>
-		 
-		<label for="message">Special Requests</label>
-		<textarea id="message" maxlength="500"></textarea>
-		
-		<select name="occasion">
-			<option>Wedding</option>
-			<option>Graduation</option>
-			<option>Birthday</option>
-			<option>Other...</option>
-		</select>
-		
-		<fieldset>
-			<legend>Quantity</legend>
-				<p>Quantity</p>
-				<label>
-					<input type="radio" name="Quantity" value="individual">Individual
-				</label>
-				<label>
-					<input type="radio" name="Quantity" value="onedozen">One Dozen
-				</label>
-				<label>
-					<input type="radio" name="Quantity" value="twodozen">Two Dozen
-				</label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>Flavors</legend>
-			<p>Flavor</p>
-			<label>
-				<input type="checkbox" name="Flavors" value="weddingcake">Wedding Cake
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="thetuxedo">The Tuxedo
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="princess">Princess
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="gobigred">Go Big Red
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="pbcup">PB Cup
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="cookies-creme">Cookies &amp; Creme
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="signature">Signature
-			</label>
-			<label>
-				<input type="checkbox" name="Flavors" value="chocolatelovers">Chocolate Lovers
-			</label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>Type</legend>
-				<p>Type</p>
-				<label>
-					<input type="radio" name="Type" value="signature">Signature
-				</label>
-				<label>
-					<input type="radio" name="Type" value="allergenfree">Allergen Free
-				</label>
-				<label>
-					<input type="radio" name="Type" value="vegan">Vegan
-				</label>
-		</fieldset>
-		
-		<p><a href="#" id="btn-white">Pay On PayPal</a></p>
-	</form>
+					<label for="tel">Phone Name</label>
+					<input type="tel" name="Telephone" id="tel">
+
+					<label for="email">Email Address</label>
+					<input type="email" name="Email" id="email" >
+			</fieldset>
+
+			<label for="message">Special Requests</label>
+			<textarea id="message" maxlength="500"></textarea>
+
+			<fieldset>
+				<legend>Occasion</legend>
+				<select name="occasion">
+					<option>Wedding</option>
+					<option>Graduation</option>
+					<option>Birthday</option>
+					<option>Other...</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="row">
+				<legend>Quantity</legend>
+					<p>Quantity</p>
+					<div>
+						<label>
+							<input type="radio" name="Quantity" value="individual">Individual
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type="radio" name="Quantity" value="onedozen">One Dozen
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type="radio" name="Quantity" value="twodozen">Two Dozen
+						</label>
+					</div>
+			</fieldset>
+
+			<fieldset class="row">
+				<legend>Flavors</legend>
+				<p>Flavor</p>
+				<div>
+					<label>
+						<input type="checkbox" name="Flavors" value="weddingcake">Wedding Cake
+					</label>
+					<label>
+						<input type="checkbox" name="Flavors" value="gobigred">Go Big Red
+					</label>
+					<label>
+						<input type="checkbox" name="Flavors" value="signature">Signature
+					</label>
+				</div>
+
+				<div>
+					<label>
+						<input type="checkbox" name="Flavors" value="thetuxedo">The Tuxedo
+					</label>		
+					<label>
+						<input type="checkbox" name="Flavors" value="pbcup">PB Cup
+					</label>
+					<label>
+						<input type="checkbox" name="Flavors" value="chocolatelovers">Chocolate Lovers
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" name="Flavors" value="princess">Princess
+					</label>
+					<label>
+						<input type="checkbox" name="Flavors" value="cookies-creme">Cookies &amp; Creme
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="row">
+				<legend>Type</legend>
+					<p>Type</p>
+					<div>
+					<label>
+						<input type="radio" name="Type" value="signature">Signature
+					</label>
+					</div>
+					<div>
+						<label>
+							<input type="radio" name="Type" value="allergenfree">Allergen Free
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type="radio" name="Type" value="vegan">Vegan
+						</label>
+					</div>
+			</fieldset>
+
+			<p><a href="#" id="btn-white">Pay On PayPal</a></p>
+		</form>
+	</div>
 </section>
 
-<footer id="bg-drk-turq">
-	<section class="wrapper fl">
-		<h4>Real Fake Authentic</h4>
-		<p>specialty bakery dedicated to creating and baking several different sweet treats.</p>
-	</section>
-	
-	<section class="wrapper fl">
-		<h4>Our Location</h4>
-		<p>123 Fake Street #101</p>
-		<p>Fakersville, FA 12345</p>
-	</section>
-	
-	<div class="wrapper fr">
-		<ul>
-			<li><a href="https://www.facebook.com/" target="_blank"></a> <span>Facebook</span> </li>
-			<li><a href="https://www.tumblr.com/" target="_blank"></a> <span>Tumbler</span> </li>
-			<li><a href="https://www.pinterest.com/" target="_blank"></a> <span>Pinterest</span> </li>
-			<li><a href="https://www.linkedin.com/" target="_blank"></a> <span>Linkedin</span> </li>
-			<li><a href="https://www.google.com/" target="_blank"></a> <span>Google</span> </li>
-		</ul>
+<footer>
+	<div class="wrapper">
+		<section class="fl">
+			<h4>Real Fake Authentic</h4>
+			<p>specialty bakery dedicated to creating and baking several different sweet treats.</p>
+		</section>
+
+		<section class="fl">
+			<h4>Our Location</h4>
+			<p>123 Fake Street #101</p>
+			<p>Fakersville, FA 12345</p>
+		</section>
+
+		<div class="fr">
+			<ul>
+				<li><a href="https://www.facebook.com/" target="_blank"></a> <span>Facebook</span> </li>
+				<li><a href="https://www.tumblr.com/" target="_blank"></a> <span>Tumbler</span> </li>
+				<li><a href="https://www.pinterest.com/" target="_blank"></a> <span>Pinterest</span> </li>
+				<li><a href="https://www.linkedin.com/" target="_blank"></a> <span>Linkedin</span> </li>
+				<li><a href="https://www.google.com/" target="_blank"></a> <span>Google</span> </li>
+			</ul>
+		</div>
 	</div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="js/functions.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,303 @@
 @charset "UTF-8";
 /* CSS Document */
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+/*josefin slab
+regular - 400
+semi-bold - 600
+bold - 700
+
+Quicksand
+regular - 400
+bold - 700*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+
+	1.1 - Headings
+
+	1.2 - Body Copy
+
+	1.3 - Button
+
+	1.4 - Lists
+
+	1.5 - Table
+
+	1.6 - Form
+
+2.0 - Navigation Menus
+
+	2.1 - Main
+
+	2.2 - Sub
+
+	2.3 - Footer
+
+3.0 - Content
+
+	3.1 - Site Structure
+
+	3.2	- Site Header
+
+	3.3	- Site Footer
+
+4.0 - Media
+
+5.0 - Utility
+
+	5.1 - Text Sizes
+
+	5.2 - Colors
+
+	5.3 - Alignments
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Typography
+-------------------------------------------------------------- */
+
+#home p, .wrapper > p, h2{
+	text-transform: uppercase;
+	color: #432920;
+}
+
+/*--------------------------------------------------------------
+1.1 - Headings
+-------------------------------------------------------------- */
+
+h1{
+	margin: 0;
+}
+
+h2{
+	font: 700 25px 'Josefin Slab', sans-serif;
+}
+
+#about h2, #products h2, #contact h2{
+	text-align: center;
+}
+
+#products h2, #contact h2{
+	color: #fff;
+}
+
+#about h2{
+	margin: 0;
+}
+
+/*--------------------------------------------------------------
+1.2 - Body Copy
+-------------------------------------------------------------- */
+
+#home p, .wrapper > p{
+	font: 700 30px 'Josefin Slab', sans-serif;
+}
+
+#home p{
+	background-color: rgba(255, 255, 255, .8);
+	padding: 25px 55px 25px 10px;
+	letter-spacing: 1px;
+	display: inline-block;
+	margin-top: 200px;
+}
+
+.wrapper > p{
+	text-align: center;
+	padding: 50px 200px;
+	line-height: 38px;
+}
+
+#about p, #products p{
+	font: 400 13px 'Quicksand', sans-serif;
+	text-transform: none;
+	line-height: 25px;
+}
+
+#products p{
+	padding: 0 400px;
+}
+
+/*--------------------------------------------------------------
+1.3 - Button
+-------------------------------------------------------------- */
+
+a{
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: #87ded1;
+}
+
+#btn-turq{
+	background-color: #87ded1;
+	padding: 10px 20px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#btn-turq:hover{
+	background-color: #6fcebe;
+}
+
+a[href="tel:+18002225858"]:hover{
+	color:  #87ded1;
+}
+
+/*--------------------------------------------------------------
+1.4 - Lists
+-------------------------------------------------------------- */
+
+nav li, a{
+	list-style: none;
+	display: inline-block;
+	color: #432920;
+}
+
+nav li{
+	font: 600 14px 'Josefin Slab', sans-serif;
+	text-transform: uppercase;
+	padding: 0 50px;
+	vertical-align: middle;
+}
+
+#about ul{
+	list-style-image: url(../img/cherry.gif);
+}
+
+#about ul li{
+	font: 400 13px 'Quicksand', sans-serif;
+	line-height: 25px;
+}
+
+#about .fr{
+	margin-right: 150px;
+}
+
+/*--------------------------------------------------------------
+1.5 - Table
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.6 - Form
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+2.0 - Navigation Menus
+-------------------------------------------------------------- */
+
+nav{
+	margin-left: 273px;
+}
+
+/*--------------------------------------------------------------
+3.0 - Content
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.1 - Site Structure
+-------------------------------------------------------------- */
+.row{
+	overflow: auto;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+img [src="img/display-cupcake.jpg"]{
+	width: 170px;
+} 
+
+#about section.fl{
+	width: 500px;
+	margin-left: 20px;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	-ms-border-radius: 100px;
+	border-radius: 100px;
+	margin: 20px auto;
+}
+
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
+
+#home{
+	background: url(../img/hero.jpg) center center;
+	background-size: cover;
+	padding: 50px 0;
+}
+
+#products section:first-of-type .circle{
+	background: #fff url(../img/product-one.png) no-repeat center;
+	background-size: 100px;
+}
+
+#products section:nth-of-type(2) .circle{
+	background: #fff url(../img/product-two.png) no-repeat center;
+	background-size: contain;
+}
+
+#products section:last-of-type .circle{
+	background: #fff url(../img/product-three.png) no-repeat center;
+	background-size: contain;
+}
+
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.2 - Colors
+-------------------------------------------------------------- */
+
+.bg-lgt-turq{
+	background-color: #87ded1;
+	padding: 20px 0;
+}
+
+footer{
+	background-color: #6fcebe;
+	padding: 10px 0;
+}
+
+#about{
+	padding-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
