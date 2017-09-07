@@ -71,12 +71,12 @@ bold - 700*/
 1.0 - Typography
 -------------------------------------------------------------- */
 
-#home p, .wrapper > p, h2, h3{
+#home p, .wrapper > p, h2, h3, caption{
 	text-transform: uppercase;
 	color: #432920;
 }
 
-#about h2, #products h2, #contact h2, h3, #products p{
+h2, h3, #products p{
 	text-align: center;
 }
 
@@ -105,6 +105,15 @@ h3{
 	letter-spacing: 2px;
 }
 
+#flavors h3{
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+#flavors h2{
+	margin-bottom: 50px;
+}
+
 /*--------------------------------------------------------------
 1.2 - Body Copy
 -------------------------------------------------------------- */
@@ -127,7 +136,7 @@ h3{
 	line-height: 38px;
 }
 
-#about p, #products p{
+#about p, #products p, #flavors p, #contact header + p{
 	font: 400 13px 'Quicksand', sans-serif;
 	text-transform: none;
 	line-height: 25px;
@@ -135,6 +144,10 @@ h3{
 
 header p{
 	padding: 0 400px;
+}
+
+#contact header + p{ /*How do i target this? How do I get submit button for form to move over(select)*/
+	padding: 0 200px;
 }
 
 /*--------------------------------------------------------------
@@ -214,6 +227,34 @@ nav li{
 /*--------------------------------------------------------------
 1.5 - Table
 -------------------------------------------------------------- */
+table{
+	margin-left: 410px;
+}
+
+td:first-child, th{
+	font: 400 14px 'Josefin Slab', sans-serif;
+	color: #432920;
+}
+
+caption{
+	font: 600 24px 'Josefin Slab', sans-serif;
+}
+
+td{
+	font: 700 14px 'Josefin Slab', sans-serif;
+	color: #fff;
+	padding: 5px 20px;
+}
+
+td, thead{
+	border-bottom: solid 1px #66C6B6;
+	border-spacing: 0 10px;
+	border-collapse: collapse;
+}
+
+tr:last-child td{
+	border: none;
+}
 
 /*--------------------------------------------------------------
 1.6 - Form
@@ -293,7 +334,11 @@ fieldset:first-of-type input, textarea, select {
 }
 
 .col-1-3.fr{
-	margin-right: 150px;
+	margin-right: 125px;
+}
+
+.col-1-3 input{
+	margin-right: 8px;
 }
 
 fieldset div {
@@ -312,23 +357,27 @@ select {
 	border-radius: 0;
 }
 
-select div {
+#triangle {
 	display: inline-block;
 	position: relative;
 	top: 0;
 	left: 0;
 }
 
-select span {
+select + span {
 	cursor:pointer;
 	width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-top: 10px solid darkblue;
+	border-top: 10px solid #432920;
 	position: absolute;
 	right: 7px;
 	top: 12px;
+}
+
+legend + p{
+	margin: 30px 0 5px;
 }
 
 /*--------------------------------------------------------------
@@ -384,11 +433,16 @@ img [src="img/display-cupcake.jpg"]{
 }
 
 #products section:nth-of-type(2){
-	margin-left: 120px;
+	margin-left: 200px;
 }
 
 form .fr{
 	width: 575px;
+}
+
+#flavors p{
+	width: 250px;
+	margin: 0 40px 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -442,7 +496,9 @@ footer{
 	padding-bottom: 50px;
 }
 
-
+#flavors{
+	padding: 50px 0;
+}
 
 
 

@@ -89,7 +89,7 @@
 	</div>
 </section>
 
-<section class="wrapper smooth-scroll">
+<section class="wrapper smooth-scroll" id="flavors">
 	<header>
 		<h2>Daily Flavors</h2>
 	</header>
@@ -152,17 +152,15 @@
 		<header>
 			<h2>Place Order</h2>
 		</header>
-		<p>Time limits for orders are 48 hours; please wait for a confirmation email to verify your order.</p>
+		<p>Time limits for orders are 48 hours please wait for a confirmation email to verify your order.</p>
 		<table>
 			<caption>Prices</caption>
 			<thead>
-
-					<tr>
-						<th colspan="2">Individual</th>
-						<th>One Dozen</th>
-						<th>Two Dozen</th>
-					</tr>
-
+				<tr>
+					<th colspan="2">Individual</th>
+					<th>One Dozen</th>
+					<th>Two Dozen</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
@@ -208,12 +206,15 @@
 				<fieldset>
 					<legend>Occasion</legend>
 					<p>Occasion</p>
-					<select name="occasion">
-						<option>Wedding</option>
-						<option>Graduation</option>
-						<option>Birthday</option>
-						<option>Other...</option>
-					</select>
+					<div id="triangle">
+						<select name="occasion">
+							<option>Wedding</option>
+							<option>Graduation</option>
+							<option>Birthday</option>
+							<option>Other...</option>
+						</select>
+						<span></span>
+					</div>
 				</fieldset>
 
 				<fieldset class="row">
