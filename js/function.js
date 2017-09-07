@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 		   var hash = this.hash;
 			
 			$('html, body').animate({
-			   scrollTop: $(this.hash).offset().top-38
+			   scrollTop: $(this.hash).offset().top-99
 			 }, 1000, function(){
 		
 			   // when done, add hash to url

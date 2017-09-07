@@ -71,12 +71,15 @@ bold - 700*/
 1.0 - Typography
 -------------------------------------------------------------- */
 
-#home p, .wrapper > p, h2, h3, caption{
+#home p, .wrapper > p, h2, h3, caption, #btn-turq, .btn-white, nav li, form{
 	text-transform: uppercase;
-	color: #432920;
 }
 
-h2, h3, #products p{
+#home p, .wrapper > p, h2, h3, caption, footer, nav li, a, td:first-child, th, form{
+	color: #432920;
+}
+	
+h2, h3, #products, .wrapper > p, nav{
 	text-align: center;
 }
 
@@ -101,7 +104,7 @@ h2{
 }
 
 h3{
-	font: 700 13px 'Quicksand', sans-serif;
+	font: 700 14px 'Quicksand', sans-serif;
 	letter-spacing: 2px;
 }
 
@@ -112,6 +115,10 @@ h3{
 
 #flavors h2{
 	margin-bottom: 50px;
+}
+
+h4{
+	font: 700 12px 'Quicksand', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -131,13 +138,11 @@ h3{
 }
 
 .wrapper > p{
-	text-align: center;
 	padding: 50px 200px;
 	line-height: 38px;
 }
 
 #about p, #products p, #flavors p, #contact header + p{
-	font: 400 13px 'Quicksand', sans-serif;
 	text-transform: none;
 	line-height: 25px;
 }
@@ -146,8 +151,12 @@ header p{
 	padding: 0 400px;
 }
 
-#contact header + p{ /*How do i target this? How do I get submit button for form to move over(select)*/
-	padding: 0 200px;
+#contact header + p{ /*How do I get submit button for form to move over(select)*/
+	padding: 0 400px;
+}
+
+footer p, #about p, #products p, #flavors p, #contact header + p{
+	font: 400 13px/25px 'Quicksand', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -166,7 +175,6 @@ nav li a:hover{
 	background-color: #87ded1;
 	padding: 10px 20px;
 	color: #fff;
-	text-transform: uppercase;
 }
 
 #btn-turq:hover{
@@ -174,16 +182,19 @@ nav li a:hover{
 }
 
 a[href="tel:+18002225858"]:hover{
-	color:  #87ded1;
+	color: #87ded1;
 }
 
 .btn-white{
 	background-color: #fff;
-	padding: 10px 20px;
+	padding: 15px 30px;
 	color: #87ded1;
-	text-transform: uppercase;
 	font: 400 13px 'Quicksand', sans-serif;
-	margin: 30px 0 0 70px;
+	margin-top: 50px;
+}
+
+#products section:nth-child(3) .btn-white{
+	margin-top: 25px;
 }
 
 .btn-white:first-child{
@@ -198,15 +209,13 @@ a[href="tel:+18002225858"]:hover{
 1.4 - Lists
 -------------------------------------------------------------- */
 
-nav li, a{
+nav li, a, footer ul li{
 	list-style: none;
 	display: inline-block;
-	color: #432920;
 }
 
 nav li{
 	font: 600 14px 'Josefin Slab', sans-serif;
-	text-transform: uppercase;
 	padding: 0 50px;
 	vertical-align: middle;
 }
@@ -229,15 +238,16 @@ nav li{
 -------------------------------------------------------------- */
 table{
 	margin-left: 410px;
+	border-collapse: collapse;
 }
 
 td:first-child, th{
 	font: 400 14px 'Josefin Slab', sans-serif;
-	color: #432920;
 }
 
 caption{
-	font: 600 24px 'Josefin Slab', sans-serif;
+	font: 600 20px 'Josefin Slab', sans-serif;
+	margin: 20px 0;
 }
 
 td{
@@ -249,7 +259,6 @@ td{
 td, thead{
 	border-bottom: solid 1px #66C6B6;
 	border-spacing: 0 10px;
-	border-collapse: collapse;
 }
 
 tr:last-child td{
@@ -262,9 +271,7 @@ tr:last-child td{
 
 form{
 	font: 400 12px 'Quicksand', sans-serif;
-	text-transform: uppercase;
 	margin: 0 auto;
-	color: #432920;
 }
 
  fieldset{
@@ -380,12 +387,30 @@ legend + p{
 	margin: 30px 0 5px;
 }
 
+form div.fr p:last-child{
+	text-align: right;
+	margin: 50px 150px;;
+}
+
+form > div.fl{
+	margin-top: 15px;
+}
+
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
 -------------------------------------------------------------- */
 
 nav{
-	margin-left: 273px;
+	position: fixed;
+	top: 0; 
+	left: 0;
+	background-color: #fff;
+	width: 100%;
+	z-index: 2;
+}
+
+ul{
+	padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -445,6 +470,14 @@ form .fr{
 	margin: 0 40px 20px 0;
 }
 
+footer section{
+	width: 300px;
+}
+
+footer section:nth-of-type(2){
+	margin-left: 50px;
+}
+
 /*--------------------------------------------------------------
 4.0 - Media
 -------------------------------------------------------------- */
@@ -474,6 +507,47 @@ form .fr{
 	-ms-background-size: 100px;
 	background-size: 100px;
 }
+
+footer ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+}
+
+ul span{
+	display: none;
+}
+
+footer ul li a{
+	width: 25px;
+	height: 25px;
+	margin: 0 10px;
+}
+
+footer ul li:first-child a{
+	background: url("../img/icon-fb.png") no-repeat 0 0;
+}
+
+footer ul li:nth-child(2) a{
+	background: url("../img/icon-tumbler.png") no-repeat 0 0;
+}
+
+footer ul li:nth-child(3) a{
+	background: url("../img/icon-pin.png") no-repeat 0 0;
+}
+
+footer ul li:nth-child(4) a{
+	background: url("../img/icon-linkedin.png") no-repeat 0 0;
+}
+
+footer ul li:last-child a{
+	background: url("../img/icon-google.png") no-repeat 0 0;
+}
+
+footer ul li a:hover{
+	background-position: 0 -25px;
+}
+
 /*--------------------------------------------------------------
 5.0 - Utility
 -------------------------------------------------------------- */
@@ -487,23 +561,21 @@ form .fr{
 	padding: 50px 0 100px;
 }
 
+div.bg-lgt-turq{
+	padding: 200px 0 100px;
+}
+
 footer{
 	background-color: #6fcebe;
-	padding: 10px 0;
 }
 
 #about{
 	padding-bottom: 50px;
 }
 
-#flavors{
+#flavors, footer{
 	padding: 50px 0;
 }
-
-
-
-
-
 
 
 
