@@ -9,11 +9,6 @@
 	box-sizing: border-box;
 }
 
-.wrapper{
-	width: 1170px;
-	margin: 0 auto;
-}
-
 /*josefin slab
 regular - 400
 semi-bold - 600
@@ -71,16 +66,28 @@ bold - 700*/
 1.0 - Typography
 -------------------------------------------------------------- */
 
-#home p, .wrapper > p, h2, h3, caption, #btn-turq, .btn-white, nav li, form{
+#intro p, #about p:first-child, h2, h3, caption, #btn-turq, .btn-white, nav li, form{
 	text-transform: uppercase;
 }
 
-#home p, .wrapper > p, h2, h3, caption, footer, nav li, a, td:first-child, th, form{
+#intro p, #about p:first-child, h2, h3, caption, footer, nav li, a, td:first-child, th, form{
 	color: #432920;
 }
 	
 h2, h3, #products, .wrapper > p, nav{
 	text-align: center;
+}
+
+#products h2, #contact h2, #btn-turq, td{
+	color: #fff;
+}
+
+#intro p, nav li, a, footer ul li, fieldset.row label, fieldset.row input, #triangle, footer ul li{
+	display: inline-block;
+}
+
+legend, ul span{
+	display: none;
 }
 
 /*--------------------------------------------------------------
@@ -95,9 +102,6 @@ h2{
 	font: 700 25px 'Josefin Slab', sans-serif;
 }
 
-#products h2, #contact h2{
-	color: #fff;
-}
 
 #about h2{
 	margin: 0;
@@ -125,19 +129,18 @@ h4{
 1.2 - Body Copy
 -------------------------------------------------------------- */
 
-#home p, .wrapper > p{
+#intro p, #about p:first-child{
 	font: 700 30px 'Josefin Slab', sans-serif;
 }
 
-#home p{
+#intro p{
 	background-color: rgba(255, 255, 255, .8);
 	padding: 25px 55px 25px 10px;
 	letter-spacing: 1px;
-	display: inline-block;
 	margin-top: 200px;
 }
 
-.wrapper > p{
+#about p:first-child{
 	padding: 50px 200px;
 	line-height: 38px;
 }
@@ -147,12 +150,13 @@ h4{
 	line-height: 25px;
 }
 
-header p{
+header p, #contact header + p{
 	padding: 0 400px;
 }
 
-#contact header + p{ /*How do I get submit button for form to move over(select)*/
-	padding: 0 400px;
+#contact header{
+	width: 170px;
+	margin: 0 auto;
 }
 
 footer p, #about p, #products p, #flavors p, #contact header + p{
@@ -167,30 +171,22 @@ a{
 	text-decoration: none;
 }
 
-nav li a:hover{
+nav li a:hover, a[href="tel:+18002225858"]:hover, .btn-white{
 	color: #87ded1;
 }
 
 #btn-turq{
-	background-color: #87ded1;
 	padding: 10px 20px;
-	color: #fff;
-}
-
-#btn-turq:hover{
-	background-color: #6fcebe;
-}
-
-a[href="tel:+18002225858"]:hover{
-	color: #87ded1;
 }
 
 .btn-white{
-	background-color: #fff;
 	padding: 15px 30px;
-	color: #87ded1;
 	font: 400 13px 'Quicksand', sans-serif;
 	margin-top: 50px;
+}
+
+.btn-white, nav{
+	background-color: #fff;	
 }
 
 #products section:nth-child(3) .btn-white{
@@ -211,7 +207,6 @@ a[href="tel:+18002225858"]:hover{
 
 nav li, a, footer ul li{
 	list-style: none;
-	display: inline-block;
 }
 
 nav li{
@@ -221,7 +216,7 @@ nav li{
 }
 
 #about ul{
-	list-style-image: url(../img/cherry.gif);
+	list-style-image: url(../img/cherry.png);
 }
 
 #about ul li{
@@ -237,7 +232,7 @@ nav li{
 1.5 - Table
 -------------------------------------------------------------- */
 table{
-	margin-left: 410px;
+	margin: 0 auto;
 	border-collapse: collapse;
 }
 
@@ -252,7 +247,6 @@ caption{
 
 td{
 	font: 700 14px 'Josefin Slab', sans-serif;
-	color: #fff;
 	padding: 5px 20px;
 }
 
@@ -278,7 +272,6 @@ form{
 	border: none;
 	margin: 0;
 	padding: 0;
-    display: block;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-before: 0em;
@@ -288,12 +281,11 @@ form{
     min-width: -webkit-min-content;
 }
 
-legend{
-	display: none;
+fieldset, .fl label, form > .fl input{
+    display: block;	
 }
 
 .fl label, form > .fl input{
-	display: block;
 	text-align: left;
 	width: 100%;
 }
@@ -302,8 +294,9 @@ fieldset:first-of-type label, form p, label[for="message"]{
 	font: 700 12px 'Quicksand', sans-serif;
 }
 
-textarea[id="message"]{
-	padding: 100px 200px;
+textarea{
+	width: 100%;
+	height: 240px;
 }
 
 label{
@@ -314,22 +307,11 @@ input{
 	padding: 10px 0;
 }
 
-input, textarea[id="message"], select{
-	background-color: #6fcebe;
-}
-
-fieldset.row label, fieldset.row input {
-	display: inline-block;
-}
-
 :focus {
     outline: #432920 auto 5px;
 }
 
 fieldset:first-of-type input, textarea, select {
-    -webkit-rtl-ordering: logical;
-    user-select: text;
-    cursor: auto;
     border-width: 2px;
     border-style: none;
     border-color: initial;
@@ -360,12 +342,10 @@ select {
 	border: 0;
 	width: 536px;
 	text-indent: 8px;
-	background-color: #6fcebe;
 	border-radius: 0;
 }
 
 #triangle {
-	display: inline-block;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -404,7 +384,6 @@ nav{
 	position: fixed;
 	top: 0; 
 	left: 0;
-	background-color: #fff;
 	width: 100%;
 	z-index: 2;
 }
@@ -420,6 +399,11 @@ ul{
 /*--------------------------------------------------------------
 3.1 - Site Structure
 -------------------------------------------------------------- */
+.wrapper{
+	width: 1170px;
+	margin: 0 auto;
+}
+
 .row{
 	overflow: auto;
 }
@@ -432,7 +416,7 @@ ul{
 	float: right;
 }
 
-img [src="img/display-cupcake.jpg"]{
+img[src="img/display-cupcake.jpg"]{
 	width: 170px;
 } 
 
@@ -461,7 +445,7 @@ img [src="img/display-cupcake.jpg"]{
 	margin-left: 200px;
 }
 
-form .fr{
+form .fr, form > .fl{
 	width: 575px;
 }
 
@@ -482,22 +466,26 @@ footer section:nth-of-type(2){
 4.0 - Media
 -------------------------------------------------------------- */
 
-#home{
+#intro{
 	background: url(../img/hero.jpg) center center;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
 	background-size: cover;
 	padding: 50px 0;
 }
 
 #products section:first-of-type .circle{
-	background: #fff url(../img/product-one.png) no-repeat center;
+	background: #fff url(../img/product-signature.png) no-repeat center;
 }
 
 #products section:nth-of-type(2) .circle{
-	background: #fff url(../img/product-three.png) no-repeat center;
+	background: #fff url(../img/product-allergen.png) no-repeat center;
 }
 
 #products section:last-of-type .circle{
-	background: #fff url(../img/product-two.png) no-repeat center;
+	background: #fff url(../img/product-vegan.png) no-repeat center;
 }
 
 #products section:first-of-type .circle, #products section:nth-of-type(2) .circle, #products section:last-of-type .circle{
@@ -510,12 +498,7 @@ footer section:nth-of-type(2){
 
 footer ul li{
 	list-style: none;
-	display: inline-block;
 	padding: 0;
-}
-
-ul span{
-	display: none;
 }
 
 footer ul li a{
@@ -556,8 +539,11 @@ footer ul li a:hover{
 5.2 - Colors
 -------------------------------------------------------------- */
 
-.bg-lgt-turq{
+.bg-lgt-turq, #btn-turq{
 	background-color: #87ded1;
+}
+
+.bg-lgt-turq{
 	padding: 50px 0 100px;
 }
 
@@ -565,7 +551,7 @@ div.bg-lgt-turq{
 	padding: 200px 0 100px;
 }
 
-footer{
+footer, input, textarea, select, #btn-turq:hover{
 	background-color: #6fcebe;
 }
 
